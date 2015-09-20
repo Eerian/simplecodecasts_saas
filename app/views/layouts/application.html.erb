@@ -3,8 +3,10 @@
 <head>
   <title>Dev Match</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag "https://js.stripe/v2/", type: 'text/javascript' %>
   <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>s
+  <%= tag :meta, :name => "stripe-key", :content => STRIPE_PUBLIC_KEY %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
 <nav class="navbar navbar-default navbar-static-top" role="navigation">
